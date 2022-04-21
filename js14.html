@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 450px;
+            height: 450px;
+            border: 10px solid red;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;   
+        }
+        .top{
+            width: 98%;
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            background: skyblue;
+        }
+        .bottom{
+            width: 98%;
+            height: 20%;
+            border: 9px solid navy;
+            background: cornflowerblue;
+        }
+        .boxs{
+          width: 23%;
+          background: #000;
+          margin: 2% auto;
+          font-size: 30px;
+          color: #fff;
+          line-height: 90px;
+          text-align: center;
+        }
+        .title{
+            font-size: 20px;
+             display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <div class="top">
+           <div class="boxs">1</div>
+           <div class="boxs">2</div>
+           <div class="boxs">3</div>
+           <div class="boxs">4</div>
+           <div class="boxs">5</div>
+           <div class="boxs">6</div>
+           <div class="boxs">7</div>
+           <div class="boxs">8</div>
+           <div class="boxs">9</div>
+           <div class="boxs">10</div>
+           <div class="boxs">11</div>
+           <div class="boxs">12</div>
+       </div>
+       <div class="bottom">
+          <div class="title" style="display:block;">
+              安徽省静安荟时间啊后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              啊飒飒荟时间啊后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              师德师风地后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              分别被关闭后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+               小程序冲冲冲视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              我可没开门了镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              安徽省静安荟时间啊后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              啊飒飒荟时间啊后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              师德师风地后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              分别被关闭后视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+               小程序冲冲冲视镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+          <div class="title">
+              我可没开门了镜暗杀近段时间第三节课电视剧的好时机·1
+          </div>
+       </div>
+    </div>
+</body>
+<script>
+ let boxs=document.querySelectorAll(".boxs")
+ let tit =document.querySelectorAll(".title")
+
+ for(var i=0;i<boxs.length;i++){
+     boxs[i].index=i
+    boxs[i].onmouseover=function(){
+        for(var j=0;j<boxs.length;j++){
+            boxs[j].style.cssText=""
+            console.log(boxs[j]);
+            tit[j].style.display=""
+        }
+        this.style.cssText="background:#fff; color:red"
+        tit[this.index].style.display="block"
+    }
+    
+ }
+</script>
+</html>

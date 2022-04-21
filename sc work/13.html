@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #ddd;
+        }
+
+        .nav {
+            width: 100%;
+            float: left;
+            height: 50px;
+            background: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            width: 100px;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .con {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+
+        ol {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="nav">
+            <li>第一节课</li>
+            <li>第二节课</li>
+            <li>第三节课</li>
+        </ul>
+        <ul class="con" style="display: block;">
+            <ol>你好啥飒飒快乐星球</ol>
+            <ol>2你好啥飒飒</ol>
+            <ol>3你好啥飒飒</ol>
+            <ol>4你好啥飒飒</ol>
+            <ol>5你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+        </ul>
+        <ul class="con">
+            <ol>你好啥飒飒快啊手机卡萨卡江苏科技阿卡</ol>
+            <ol>2你好啥飒飒</ol>
+            <ol>3你好啥飒飒</ol>
+            <ol>4你好啥飒飒</ol>
+            <ol>5你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+        </ul>
+        <ul class="con">
+            <ol>你好啥飒飒飒飒金沙江洒红节洒红节</ol>
+            <ol>2你好啥飒飒</ol>
+            <ol>3你好啥飒飒</ol>
+            <ol>4你好啥飒飒</ol>
+            <ol>5你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+            <ol>6你好啥飒飒</ol>
+        </ul>
+    </div>
+</body>
+<script>
+    // 获取元素
+    let nav = document.querySelector(".nav")
+    let lis = document.querySelectorAll("li");
+    let con = document.querySelectorAll(".con")
+    let ols = document.querySelectorAll("ol")
+    
+    // 排他思想
+    // 第一个for循环 循环ul 里面的li  循环结束 把 下标 赋值给 index 
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i
+        // 找到所有的li 绑定移入事件 
+        lis[i].onmouseover = function () {
+            // 第二个循环 循环li的长度 然后 将所有的盒子样式变成空
+            for (var j = 0; j < lis.length; j++) {
+                console.log(j);
+                lis[j].style.cssText = ""
+                con[j].style.display = "none"
+                console.log(lis[j]);
+            }
+            console.log(this);
+            // 第一个for循环显示this指向的li 让他加上样式 
+            this.style.cssText = "background:#fff ; color:#000"
+            con[this.index].style.display = "block"
+
+
+        }
+    }
+</script>
+
+</html>

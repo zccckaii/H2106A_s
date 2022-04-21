@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            display: inline-block;
+            box-sizing: border-box;
+           
+        }
+        .box2{
+            width: 260px;
+            height: 260px;
+            background: #000;
+            margin: 0 auto;
+            box-sizing: border-box;
+            /* border: 10px solid #000; */
+            display: inline-block;
+        }
+        .title{
+            font-size: 18px;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+            <p class="title">
+                鼠标移入变样式,简单且粗暴
+            </p>
+          </div>
+    </div>
+    
+</body>
+<script>
+    let box1 =document.querySelector(".box1");
+    let box2 =document.querySelector(".box2");
+    let tit =document.querySelector(".title");
+    
+     box1.onmouseover=function(){
+      box2.style.border="10px solid red"
+      tit.style.color="red"
+      box2.style.background="#fff"
+    }
+    box1.onmouseout=function(){
+        box2.style.border="10px solid #000"
+      tit.style.color="#fff"
+      box2.style.background="#000"
+    }
+    
+</script>
+</html>

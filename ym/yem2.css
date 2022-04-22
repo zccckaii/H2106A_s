@@ -1,0 +1,89 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    max-width: 750px;
+     min-width: 350px;
+     background: #f6f6f8;
+  }
+  .hea{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+  }
+  .wu{
+      height: .4rem;
+      font-size: .28rem;
+      color: #43d5ae;
+       margin: .3rem;
+  }
+  .ico{
+     width: .2rem;
+     height: .2rem; 
+     margin: .2rem;
+  }
+  .xj{
+      font-size: .35rem;
+      margin-top: .2rem;
+      padding-right: .5rem;
+  }
+  .box1{
+    width: 100%;
+    background: #eaecf1;
+    height: 1.2rem;
+}
+.jumin{
+    font-size: .4rem;
+    padding: .45rem;
+}
+.box2{
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: .001rem solid rgb(219, 219, 219);
+    line-height: 1rem;
+}
+.box_left{
+    padding-left: .3rem;
+    font-size: .35rem;
+    color: #999;
+}
+.box_cen{
+    font-size: .32rem;
+    padding-right: .4rem;
+}
+.box_rigth{
+    font-size: .4rem;
+    color: #9999;
+    padding-right: .3rem;
+}
+.box3{
+    width: 100%;
+    height: 2.5rem;
+    background: #fff;
+    border: .001rem solid rgb(219, 219, 219);
+    display: flex;
+}
+.title{
+    font-size: .35rem;
+    padding: .35rem;
+    color: #999;
+}
+.content{
+    width: 70%;
+    height: 2.2rem;
+    background: #f2f2f2;
+    border-radius: .2rem;
+    margin: .1rem;
+}
+p{
+    font-size: .35rem;
+    color: #9999;
+    padding: .25rem;
+}

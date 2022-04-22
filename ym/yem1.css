@@ -1,0 +1,84 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    max-width: 750px;
+     min-width: 350px;
+     background: #f6f6f8;
+  }
+  .hea{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+  }
+  .wu{
+      height: .4rem;
+      font-size: .28rem;
+      color: #43d5ae;
+       margin: .3rem;
+  }
+  .ico{
+     width: .2rem;
+     height: .2rem; 
+     margin: .2rem;
+  }
+  .xj{
+      font-size: .35rem;
+      margin-top: .2rem;
+      padding-right: .5rem;
+  }
+  .ok{
+      width: 100%;
+      height: 1.5rem;
+      background: #fff; 
+  }
+  .yuan{
+      display: inline-block;
+      margin: .6rem  0 50% 45%;
+      width: .7rem;
+      height: .7rem;
+      background: #43d5ae;
+      border-radius: 50%;
+      line-height: .7rem ;
+      font-size: .35rem;
+      text-align: center;
+      color: #fff;
+  }
+  .box1{
+      width: 100%;
+      height: .8rem;
+      font-size: .36rem;
+      background: #fff;
+      text-align: center;
+      line-height: .8rem;
+  }
+  .box2{
+    width: 100%;
+    height: .4rem;
+    font-size: .25rem;
+    background: #fff;
+    text-align: center;
+    line-height: .4rem;
+    color: #9999;
+  }
+  .box3{
+      width: 100%;
+      height: 2rem;
+      background: #fff;
+      display: flex;
+  }
+  .btn1{
+      width: 80%;
+      height: 1rem;
+      background:#43d5ae;
+      margin: .7rem;
+      border-radius: .2rem;
+      font-size: .35rem;
+      color: #fff;
+      text-align: center;
+      line-height: 1rem;
+  }

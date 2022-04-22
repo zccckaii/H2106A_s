@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height: 200px;
+            
+        }
+        header{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background: #808080;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            background: #999;
+            /* display: block; */
+        }
+        li{
+            list-style: none;
+            width: 100%;
+            height: 16.6%;
+            margin-top: 5px;
+            /* background: #9999; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <header>播放列表...</header>
+        <ul>
+            <li>双节棍 - 周杰伦</li>
+            <li>戒烟 - 李荣浩</li>
+            <li>说散就算 - 艾福杰尼</li>
+            <li>红豆 - 王妃</li>
+            <li>七里香 - 周杰伦</li>
+            <li >暧昧 - 薛之谦</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let hed =document.querySelector("header");
+    let lis =document.querySelectorAll("li")
+    let uls =document.querySelector("ul")
+
+    hed.onclick=function(){
+        console.log(uls);
+      uls.style.display=  uls.style.display =="none" ? "block" :"none"
+    }
+    for(var i=0;i<lis.length;i++){
+        lis[i].onmouseover=function(){
+           console.log(i);
+          this.style.background="#fff"
+          console.log(this);
+        }
+        lis[i].onmouseout=function(){
+            this.style.background="#9999"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">点击div变红</button>
+     <nav>
+        <div></div>
+        <div></div>
+        <div></div>
+     </nav>
+    
+</body>
+<script>
+let btn =document.querySelector(".btn");
+let box =document.querySelectorAll("div");
+
+btn.onclick=function(){
+   
+    console.log(1)
+    for(var i=0 ;i<box.length;i++){
+      box[i].style.background="red"
+    }
+}
+</script>
+</html>

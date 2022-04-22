@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box{
+           width: 100px;
+           height: 300px;
+           border: 1px solid #000;
+           margin: 0 auto;
+       }
+       .tou{
+           width: 100%;
+           height: 30px;
+           border-bottom: 1px solid #000;
+       }
+      
+    </style>
+</head>
+<body>
+    <div class="box">
+       <div class="tou"> 
+           <input type="checkbox" id="checkall">  <span class="tite">全选</span> <span class="tit" style="display: none;" >全不选</span>  <a>反选</a>
+       </div>
+       <p> <input type="checkbox" id="check"> <label>选项一</label></p>
+       <p> <input type="checkbox" id="check"> <label>选项2</label></p>
+       <p> <input type="checkbox" id="check"> <label>选项3</label></p>
+       <p> <input type="checkbox" id="check"> <label>选项4</label></p>
+       <p> <input type="checkbox" id="check"> <label>选项5</label></p>
+       <p> <input type="checkbox" id="check"> <label>选项6</label></p>
+    </div>
+</body>
+<script>
+    let checkall =document.querySelector("#checkall");
+    let check =document.querySelectorAll("#check")
+    let a = document.querySelector("a")
+    let tit =document.querySelector(".tit")
+    let tite =document.querySelector(".tite")
+    // 给全选绑定事件
+    checkall.onclick =function(){
+        // 进行for循环所有的check框
+        for(var i=0;i<check.length;i++){
+            // 让全选框和check的框的checked属性保持一致
+          check[i].checked =this.checked
+          console.log(i);
+          console.log(this.checked);
+      }
+    }
+    // 循环所有check框 给每个我点的框绑定 事件
+    for(var j=0 ;j<check.length;j++){
+
+        check[j].onclick=function(){
+            bb()
+          
+        }
+    }
+
+//   点击反选的时候让全选选中 
+ let bb =function(){
+     let newArr=[]
+     check.forEach(item=>{
+        if(item.checked){
+            newArr.push(item)
+            console.log(newArr.length);
+        }
+     })
+     if(newArr.length==check.length){
+         checkall.checked=true
+     }else{
+         checkall.checked =false
+     }
+ }
+a.onclick=function(){
+    check.forEach(item=>{
+        item.checked= !item.checked
+        // tit.style.display="block"
+        // tite.style.display="none"
+
+     })
+     bb()
+}
+</script>
+</html>
